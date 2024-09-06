@@ -6,7 +6,7 @@ public class PlayerContoller : MonoBehaviour
 {
     Rigidbody2D rb;
     public float moveSpeed;
-  
+
 
     // Start is called before the first frame update
     void Start()
@@ -25,6 +25,14 @@ public class PlayerContoller : MonoBehaviour
         {
             transform.position += Vector3.left * moveSpeed * Time.deltaTime;
         }
+        if (Input.GetKeyDown(KeyCode.UpArrow))
+        {
+            transform.position += Vector3.up * moveSpeed * Time.deltaTime;
+        }
+        if (Input.GetKeyDown(KeyCode.DownArrow))
+        {
+            transform.position += Vector3.down * moveSpeed * Time.deltaTime;
+        }
     }
-   
 }
+       
